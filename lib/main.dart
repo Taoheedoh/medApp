@@ -1,19 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:medapp/welcomepage.dart';
+
 
 void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatefulWidget {
+class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  @override
   Widget build(BuildContext context) {
-    return const MaterialApp();
+    return  MaterialApp(
+    debugShowCheckedModeBanner: false,
+    theme: ThemeData(useMaterial3: true,
+      brightness: Brightness.dark,
+      scaffoldBackgroundColor: const Color.fromARGB(255, 12, 88, 150),
+    ),
+    home: const WelcomePage(),
+      
+    );
   }
 }
